@@ -4,10 +4,9 @@ html, body{
   background-color: black;
 }
 .container{
-  margin-right: auto;
-  margin-left: auto;
-  width: 50%;
-  height: 50%;
+  margin: auto;
+  margin-top: 100px; 
+  width: 500px;
 }
 .row{
   margin: 0px;
@@ -36,38 +35,42 @@ html, body{
   background-color: #DB2B39;
   z-index: 1;
   animation:
-    roll 2s linear infinite,
-    fade 1s linear infinite alternate both,
-    grow 2s linear infinite,
-    slidein 2s linear infinite both;
-   
+    roll 4s linear 1s 2,
+    fade 2s linear 1s 2 alternate backwards,
+    grow 4s linear 1s 2 forwards,
+    squareUp 4s linear 1s 2 alternate,
+    strobeText 4s ease-in 1s 2 forwards;
+     
 }
 .d2{
   background-color: #EFA00B;
   z-index: 2;
   animation:
-    roll 2s linear infinite,
-    fade 1s linear infinite alternate both,
-    grow 2s linear infinite,
-    slidein 2s linear infinite alternate both;
+    roll 4s linear 1s 2,
+    fade 2s linear 1s 2 alternate backwards,
+    grow 4s linear 1s 2 forwards,
+    squareUp 4s linear 1s 2 alternate,
+    strobeText 4s ease-in 1s 2 forwards;
 }
 .d3{
   background-color: #0075C4;
   z-index: 3;
   animation:
-    roll 2s linear infinite reverse,
-    fade 1s linear infinite alternate both,
-    grow 2s linear infinite,
-    slidein 2s linear infinite alternate-reverse both;
+    roll 4s linear 1s 2 reverse,
+    fade 2s linear 1s 2 alternate backwards,
+    grow 4s linear 1s 2 forwards,
+    squareUp 4s linear 1s 2 alternate,
+    strobeText 4s ease-in 1s 2 forwards;
 }
 .d4{
   background-color: #FF4E00;
   z-index: 4;
   animation:
-    roll 2s linear infinite reverse,
-    fade 1s linear infinite alternate both,
-    grow 2s linear infinite,
-    slidein 2s linear infinite reverse both;
+    roll 4s linear 1s 2 reverse,
+    fade 2s linear 1s 2 alternate backwards,
+    grow 4s linear 1s 2 forwards,
+    squareUp 4s linear 1s 2 alternate,
+    strobeText 4s ease-in 1s 2 forwards;
 }
 @keyframes fade{
   from{
@@ -93,11 +96,26 @@ html, body{
     font-size: 2.5em;
   }
 }
-@keyframes slidein{
+@keyframes squareUp{
   from{
-    left: 0px;
+    border-radius: 50%;
   }
   to{
-    left: 50px;;
+    border-radius: 0%;
   }
+}
+@keyframes strobeText{
+    from{
+      color: darkgray;
+    }20%{
+      color: #DB2B39;
+    }40%{
+      color: #EFA00B;
+    }60%{
+      color: #0075C4;
+    }80%{
+      color: #FF4E00;
+    }to{
+      color: white;
+    }
 }
