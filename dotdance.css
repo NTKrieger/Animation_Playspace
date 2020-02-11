@@ -1,0 +1,103 @@
+html, body{
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+}
+.container{
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+  height: 50%;
+}
+.row{
+  margin: 0px;
+  padding: 0px;
+}
+.dot{
+  border-radius: 50%;
+  margin: 0px;
+  width: 25px;
+  height: 25px;
+  padding: 0px;
+  text-align: center;
+  font-weight: bold;
+  color: darkgray;
+  position: relative;
+  display: inline-block;
+}
+.square:hover{
+  opacity: .8;
+  box-shadow: 1px 1px;
+  color: white;
+  font-size: 1.4em;
+  }
+
+.d1{
+  background-color: #DB2B39;
+  z-index: 1;
+  animation:
+    roll 2s linear infinite,
+    fade 1s linear infinite alternate both,
+    grow 2s linear infinite,
+    slidein 2s linear infinite both;
+   
+}
+.d2{
+  background-color: #EFA00B;
+  z-index: 2;
+  animation:
+    roll 2s linear infinite,
+    fade 1s linear infinite alternate both,
+    grow 2s linear infinite,
+    slidein 2s linear infinite alternate both;
+}
+.d3{
+  background-color: #0075C4;
+  z-index: 3;
+  animation:
+    roll 2s linear infinite reverse,
+    fade 1s linear infinite alternate both,
+    grow 2s linear infinite,
+    slidein 2s linear infinite alternate-reverse both;
+}
+.d4{
+  background-color: #FF4E00;
+  z-index: 4;
+  animation:
+    roll 2s linear infinite reverse,
+    fade 1s linear infinite alternate both,
+    grow 2s linear infinite,
+    slidein 2s linear infinite reverse both;
+}
+@keyframes fade{
+  from{
+    opacity: 0;    
+  }
+  to{
+    opacity: 1;
+  }
+}
+@keyframes roll{
+  from{
+    transform: rotate(0deg);  
+  }
+  to{
+    transform: rotate(360deg);  
+  }
+}
+@keyframes grow{
+  from{
+    font-size: .5em;
+  }
+  to{
+    font-size: 2.5em;
+  }
+}
+@keyframes slidein{
+  from{
+    left: 0px;
+  }
+  to{
+    left: 50px;;
+  }
+}
